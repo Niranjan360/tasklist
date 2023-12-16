@@ -1,0 +1,46 @@
+{
+  "tasks": [
+    {
+      "id": 1,
+      "taskname": "React class",
+      "startDate": "01/11/2023",
+      "endDate": "01/12/2023",
+      "summary": "start react class"
+    },
+    {
+      "id": 2,
+      "taskname": "JS class",
+      "startDate": "01/09/2023",
+      "endDate": "01/10/2023",
+      "summary": "start js class"
+    },
+    {
+      "id": 3,
+      "taskname": "HTML class",
+      "startDate": "01/09/2023",
+      "endDate": "01/10/2023",
+      "summary": "start HTML class"
+    },
+    {
+      "id": 4,
+      "taskname": "CSS class",
+      "startDate": "01/09/2023",
+      "endDate": "01/10/2023",
+      "summary": "start CSS class"
+    },
+    {
+      "taskname": "data structure",
+      "startDate": "2023-12-16",
+      "endDate": "2023-12-24",
+      "summary": "start ds ",
+      "id": 5
+    },
+    {
+      "taskname": "hybernate",
+      "startDate": "2023-12-17",
+      "endDate": "2024-01-07",
+      "summary": "start hyberante classes asap",
+      "id": 6
+    }
+  ]
+}
