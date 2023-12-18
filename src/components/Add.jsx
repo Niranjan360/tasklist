@@ -15,7 +15,7 @@ const Add = () => {
         let newTask = {
                         taskname : taskname.current.value,
                         startDate : start.current.value,
-                        endDate : end.current.value,
+                        end : end.current.value,
                         summary : summary.current.value,
                      }
         

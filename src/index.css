@@ -90,5 +90,50 @@ table td a{
 .add form textarea{
   display: block;
   margin: 5px auto;
+}
 
+
+/* update form */
+.update-form{
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  background-color:rgba(0, 0, 0, 0.655);
+  backdrop-filter: blur(5px);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: pop 0.5s;
+}
+@keyframes pop {
+  0%{
+    transform: scale(0);
+  }  
+  100%{
+    transform: scale(1);
+  }
+}
+
+.update-form h1{
+  text-align: center;
+  margin: 30px;
+}
+.update-form form{
+  background-color: var(--dkblue);
+  width: 400px;
+  height: auto;
+  padding: 15px;
+  margin: auto;
+}
+.update-form form input{
+  display: block;
+  width: 90%;
+  height: 30px;
+  margin: 5px auto;
+}
+.update-form form textarea{
+  display: block;
+  margin: 5px auto;
 }
