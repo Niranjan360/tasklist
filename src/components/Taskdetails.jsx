@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 
 const Taskdetails = () => {
@@ -6,8 +6,12 @@ const Taskdetails = () => {
     let[task , setTask ] = useState(null);
     let {tid} = useParams();
     let redirect = useNavigate();
+    let[show , setShow ] = useState(false);
 
-    let[pop , setPop ] = useState(false);
+    let taskname = useRef();
+    let start = useRef();
+    let end = useRef();
+    let summary = useRef();
 
 
     useEffect(()=>{
@@ -19,18 +23,37 @@ const Taskdetails = () => {
     } , [])
 
     let handleDelete = ()=>{
-
-        let config = {
-                        method : "DELETE"
-                    }
-
+        
         if(window.confirm("Are you sure ? to delete"))
         {
-            fetch("http://localhost:4000/tasks/"+tid ,  config)
+            fetch("http://localhost:4000/tasks/"+tid ,  {method : "DELETE"})
             .then(()=>{
                 redirect("/");
             })
         }
+    }
+
+    let handleUpdateTask = (e)=>{
+        e.preventDefault();
+
+        let updateTask = {
+                            taskname : taskname.current.value,
+                            startDate : start.current.value,
+                            endDate : end.current.value,
+                            summary : summary.current.value
+                        }
+
+        let config = {
+            method : "PUT",
+            headers : {"Content-Type":"application/json" , "Accept-Type":"application/json"},
+            body : JSON.stringify(updateTask)
+        }
+
+        fetch("http://localhost:4000/tasks/"+tid , config)
+        .then(()=>{
+            alert("data updated");
+            redirect("/");
+        })
     }
 
     return ( 
@@ -45,27 +68,26 @@ const Taskdetails = () => {
 
                         <button onClick={handleDelete}> delete </button>
 
-                        <button onClick={()=>{setPop(true)}}> update </button>
-
+                        <button onClick={()=>{setShow(true)}}> update </button>
                     </div>}
 
-            {pop && 
-                    <div className="update-form">
+            {show && <div className="update-form">
                         <div>
-                            <h1>Add new task</h1>
+                            <h1>Update Task</h1>
+                            <form onSubmit={handleUpdateTask}>
+                                <input type="text" placeholder="Taskname" ref={taskname}/>
+                                <input type="date" ref={start}/>
+                                <input type="date" ref={end}/>
+                                <textarea cols="50" rows="3" placeholder="summary" ref={summary}></textarea>
 
-                            <form>
-                                <input type="text" placeholder="Taskname" />
-                                <input type="date" />
-                                <input type="date" />
-                                <textarea cols="50" rows="3" placeholder="summary" ></textarea>
-
-                                <input type="submit" value="Add task"  />
+                                <input type="submit" value="Update task"  />
                             </form>
+
+
+                            <button onClick={()=>{setShow(false)}}> close </button>
                         </div>
-                        <button onClick={()=>{setPop(false)}}>close</button>
                     </div>}
-                
+
         </div>
      );
 }

@@ -8,11 +8,11 @@
       "summary": "start react class"
     },
     {
-      "id": 2,
-      "taskname": "JS class",
-      "startDate": "01/09/2023",
-      "endDate": "01/10/2023",
-      "summary": "start js class"
+      "taskname": "Javascript class",
+      "startDate": "2023-12-18",
+      "endDate": "2023-12-31",
+      "summary": "js class",
+      "id": 2
     },
     {
       "id": 3,
@@ -29,10 +29,10 @@
       "summary": "start CSS class"
     },
     {
-      "taskname": "hybernate",
-      "startDate": "2023-12-17",
-      "endDate": "2024-01-07",
-      "summary": "start hyberante classes asap",
+      "taskname": "new updated task",
+      "startDate": "2023-12-18",
+      "endDate": "2023-12-31",
+      "summary": "thisi is updatedtask",
       "id": 6
     }
   ]

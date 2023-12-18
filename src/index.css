@@ -66,6 +66,18 @@ table td a{
 .task-details{
   text-align: center;
 }
+.task-details button{
+  background-color: var(--lgblue);
+  padding: 7px 20px;
+  border: solid 1px var(--lgblue);
+  color: white;
+  font-size: 16px;
+  margin: 10px 20px;
+}
+.task-details button:active{
+  color: var(--lgblue);
+  background-color: white;
+}
 
 
 /* add */
@@ -93,33 +105,24 @@ table td a{
 }
 
 
-/* update form */
+
 .update-form{
-  position: absolute;
-  top: 0%;
-  left: 0%;
-  background-color:rgba(0, 0, 0, 0.655);
+  background-color: rgba(0, 0, 0, 0.701);
   backdrop-filter: blur(5px);
   width: 100vw;
   height: 100vh;
+  position: absolute;
+  top: 0px;
+  left: 0px;
   display: flex;
   justify-content: center;
   align-items: center;
-  animation: pop 0.5s;
 }
-@keyframes pop {
-  0%{
-    transform: scale(0);
-  }  
-  100%{
-    transform: scale(1);
-  }
-}
-
 .update-form h1{
   text-align: center;
-  margin: 30px;
+  color: white;
 }
+
 .update-form form{
   background-color: var(--dkblue);
   width: 400px;
