@@ -140,3 +140,23 @@ table td a{
   display: block;
   margin: 5px auto;
 }
+
+
+.signup-cont{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.signup-cont form{
+  background-color: #52A2F3;
+  padding: 20px;
+  border-radius: 10px;
+}
+.signup-cont form input{
+  display: block;
+  width: 300px;
+  height: 40px;
+  margin: 15px auto;
+}

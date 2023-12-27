@@ -4,14 +4,17 @@ import Navbar from './components/Navbar';
 import Home from './components/Home';
 import Taskdetails from './components/Taskdetails';
 import Add from './components/Add';
+import Signup from './components/Signup';
+import Login from './components/Login';
 
 function App() {
   return (
     <BrowserRouter>
     <div className="App">
-      <Navbar/>
       <Routes>
-        <Route path='/' element={<Home/>}/>
+        <Route path='/' element={<Signup/>}/>
+        <Route path='/signin' element={<Login/>}/>
+        <Route path='/home' element={<Home/>}/>
         <Route path='/details/:tid' element={<Taskdetails/>}/>
         <Route path='/add' element={<Add/>}/>
       </Routes>
