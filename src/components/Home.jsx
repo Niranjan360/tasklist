@@ -15,21 +15,9 @@ const Home = () => {
         })    
     } , [])
 
-    let verify = ()=>{
-        if(localStorage.getItem("currentUser")==null)
-        {
-            return false;
-        }
-        else
-        {
-            return true
-        }
-    }
-
     return (
         <div>
-            {
-                verify() ? <div className="home-comp">
+            <div className="home-comp">
                 <Navbar/>
                 <h1> Task List </h1>
                 <table border="3px">
@@ -56,8 +44,7 @@ const Home = () => {
                                         }
                                     </tbody>}
                 </table>
-                            </div> : <Navigate to="/signin"/>
-            }
+            </div>
         </div>
     );
 

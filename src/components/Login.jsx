@@ -1,5 +1,5 @@
 import { useRef, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Login = () => {
 
@@ -33,12 +33,15 @@ const Login = () => {
 
     return ( 
         <div className="signup-cont">
+            <div>
             <form onSubmit={handleLogin}>
                 <input type="text" placeholder="Username" ref={username} /> 
                 <input type="password" placeholder="Password" ref={userPass}/>
 
                 <input type="submit" value="Sign Up" />
             </form>
+            <span>Don't have an acccount ? <Link to="/">Signup</Link></span>
+            </div>
         </div>
      );
 }

@@ -28,7 +28,7 @@ const Taskdetails = () => {
         {
             fetch("http://localhost:4000/tasks/"+tid ,  {method : "DELETE"})
             .then(()=>{
-                redirect("/");
+                redirect("/home");
             })
         }
     }
@@ -52,7 +52,7 @@ const Taskdetails = () => {
         fetch("http://localhost:4000/tasks/"+tid , config)
         .then(()=>{
             alert("data updated");
-            redirect("/");
+            redirect("/home");
         })
     }
 

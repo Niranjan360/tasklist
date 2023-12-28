@@ -143,12 +143,18 @@ table td a{
 
 
 .signup-cont{
+  text-align: center;
   width: 100vw;
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+.signup-cont span{
+  display: block;
+  margin: 20px auto;
+}
+
 .signup-cont form{
   background-color: #52A2F3;
   padding: 20px;

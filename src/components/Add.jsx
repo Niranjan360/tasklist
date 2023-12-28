@@ -28,7 +28,7 @@ const Add = () => {
         fetch("http://localhost:4000/tasks" , config)
         .then(()=>{
             alert("new data added");
-            redirect("/")
+            redirect("/home")
         })
     }
 
